@@ -4,14 +4,25 @@
     box-sizing: border-box;
 }
 .container{
+
     display: flex;
     flex-direction: column;
-    justify-content: center;;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 #submit{
     background-color: #454CAD;
     color: white;
-    width: 120px;
+    width: 60px;
     height: 30px;
     border: 1px solid black;
 }
@@ -20,6 +31,9 @@
     width: 200px;
 }
 img{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     height: 200px;
     width: 200px;
 }
