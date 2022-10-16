@@ -14,7 +14,7 @@ def hello():
 @app.route("/", methods=["GET", "POST"])
 def land():
     if request.method=="GET":
-      return render_template("test.html");
+      return render_template("index.html");
     if request.method=="POST":
       recievedFile = request.files['fileUpload']
       print('File Recieved')
@@ -35,7 +35,7 @@ def land():
                   continue
                 x+=str(lt[i][j])
               lt[i]=x
-            return render_template("img.html", img=lt) 
+            return render_template("img.html", sq = search_query, img=lt) 
             #str(lt) # return the list of images
       else:
             return "No file recieved"
