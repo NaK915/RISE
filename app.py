@@ -4,7 +4,7 @@ from caption import predict
 import os
 from PIL import Image
 from ib64 import image_to_base64
-app = Flask(__name__, template_folder="templateFiles")
+app = Flask(__name__, template_folder="templateFiles", static_folder="static")
 
 #This is just for testing purpose
 @app.route("/hello")
@@ -13,8 +13,11 @@ def hello():
 
 @app.route("/", methods=["GET", "POST"])
 def land():
+    if request.method=="GET":
+      return render_template("test.html");
     if request.method=="POST":
       recievedFile = request.files['fileUpload']
+      print('File Recieved')
       if recievedFile.filename != '':
             recievedFile.save( str(recievedFile.filename))
             image_path =  str(recievedFile.filename) 

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+#submit{
+    background-color: #454CAD;
+    color: white;
+    width: 120px;
+    height: 30px;
+    border: 1px solid black;
+}
+.res{
+    height: 200px;
+    width: 200px;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
